@@ -192,9 +192,9 @@ class GradleFxDerivedProperties {
     * @param version The original version string
     * @return The version string formatted according to the <0-999>.<0-999>.<0-999> pattern
     */
-   private String toVersionNumber(String version) {
+   private String toVersionNumber(version) {
        //[^\.\d] : remove anything that is not a dot or a number
-       return !version || version == 'unspecified' ? '0.0.0' : version.replaceAll(/[^\.\d]/, '')
+       return !version || version == 'unspecified' ? '0.0.0' : version.toString().replaceAll(/[^\.\d]/, '')
    }
    
    /** 
